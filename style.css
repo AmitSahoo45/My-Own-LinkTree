@@ -1,0 +1,342 @@
+:root {
+    --font-family: 'Montserrat', sans-serif;
+    --font-family-1: 'Sacramento', cursive;
+    --color-4: #0194ff;
+    --color-5: #19d0ff;
+    --color-1: #2b6da3;
+    --color-2: #73a1c7;
+    --color-3: #b5d0e0;
+}
+
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.intro__banner {
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.intro__banner h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.loop-wrapper {
+    margin: 0 auto;
+    position: relative;
+    display: block;
+    /* width: 600px; */
+    height: 250px;
+    overflow: hidden;
+    border-bottom: 3px solid #fff;
+    color: #fff;
+    background: linear-gradient(to bottom right, #fdc639, #ff7c60);
+
+}
+
+.mountain {
+    position: absolute;
+    right: -900px;
+    bottom: -20px;
+    width: 2px;
+    height: 2px;
+    box-shadow:
+        0 0 0 50px #74B02F,
+        60px 50px 0 70px #74B02F,
+        90px 90px 0 50px #74B02F,
+        250px 250px 0 50px #74B02F,
+        290px 320px 0 50px #74B02F,
+        320px 400px 0 50px #74B02F;
+    transform: rotate(130deg);
+    animation: mtn 20s linear infinite;
+}
+
+.hill {
+    position: absolute;
+    right: -900px;
+    bottom: -50px;
+    width: 400px;
+    border-radius: 50%;
+    height: 20px;
+    box-shadow:
+        0 0 0 50px #6A414A,
+        -20px 0 0 20px #6A414A,
+        -90px 0 0 50px #6A414A,
+        250px 0 0 50px #6A414A,
+        290px 0 0 50px #6A414A,
+        620px 0 0 50px #6A414A;
+    animation: hill 12s 2s linear infinite;
+}
+
+.tree,
+.tree:nth-child(2),
+.tree:nth-child(3) {
+    position: absolute;
+    height: 100px;
+    width: 35px;
+    bottom: 0px;
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/130015/tree.svg) no-repeat;
+    filter: invert(60%) sepia(79%) saturate(3000%) hue-rotate(86deg) brightness(118%) contrast(119%);
+}
+
+.rock {
+    margin-top: -17%;
+    height: 2%;
+    width: 2%;
+    bottom: -2px;
+    border-radius: 20px;
+    position: absolute;
+    background: #C0CBD1;
+}
+
+.truck,
+.wheels {
+    transition: all ease;
+    width: 85px;
+    margin-right: -60px;
+    bottom: 0px;
+    right: 50%;
+    position: absolute;
+    background: #eee;
+}
+
+.truck {
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/130015/truck.svg) no-repeat;
+    background-size: contain;
+    height: 60px;
+}
+
+.truck:before {
+    content: " ";
+    position: absolute;
+    width: 25px;
+    box-shadow:
+        -30px 28px 0 1.5px #fff,
+        -35px 18px 0 1.5px #fff;
+}
+
+.wheels {
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/130015/wheels.svg) no-repeat;
+    height: 15px;
+    margin-bottom: 0;
+}
+
+.tree {
+    animation: tree 3s 0.000s linear infinite;
+}
+
+.tree:nth-child(2) {
+    animation: tree2 2s 0.150s linear infinite;
+}
+
+.tree:nth-child(3) {
+    animation: tree3 8s 0.050s linear infinite;
+}
+
+.rock {
+    animation: rock 4s -0.530s linear infinite;
+}
+
+.truck {
+    animation: truck 4s 0.080s ease infinite;
+}
+
+.wheels {
+    animation: truck 4s 0.001s ease infinite;
+}
+
+.truck:before {
+    animation: wind 1.5s 0.000s ease infinite;
+}
+
+
+@keyframes tree {
+    0% {
+        transform: translate(1350px);
+    }
+
+    50% {}
+
+    100% {
+        transform: translate(-50px);
+    }
+}
+
+@keyframes tree2 {
+    0% {
+        transform: translate(650px);
+    }
+
+    50% {}
+
+    100% {
+        transform: translate(-50px);
+    }
+}
+
+@keyframes tree3 {
+    0% {
+        transform: translate(2750px);
+    }
+
+    50% {}
+
+    100% {
+        transform: translate(-50px);
+    }
+}
+
+@keyframes rock {
+    0% {
+        right: -200px;
+    }
+
+    100% {
+        right: 2000px;
+    }
+}
+
+@keyframes truck {
+    0% {}
+
+    6% {
+        transform: translateY(0px);
+    }
+
+    7% {
+        transform: translateY(-6px);
+    }
+
+    9% {
+        transform: translateY(0px);
+    }
+
+    10% {
+        transform: translateY(-1px);
+    }
+
+    11% {
+        transform: translateY(0px);
+    }
+
+    100% {}
+}
+
+@keyframes wind {
+    0% {}
+
+    50% {
+        transform: translateY(3px)
+    }
+
+    100% {}
+}
+
+@keyframes mtn {
+    100% {
+        transform: translateX(-2000px) rotate(130deg);
+    }
+}
+
+@keyframes hill {
+    100% {
+        transform: translateX(-2000px);
+    }
+}
+
+/* ========================================================================= */
+/* ========================================================================= */
+.link__tree {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: url(/assets/bg.jpg) center center/cover no-repeat;
+}
+
+.container {
+    position: relative;
+    width: 350px;
+    height: 320px;
+    background: #121212;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    margin: 1.5rem 0;
+    /* border: 5px solid #ffffff; */
+}
+
+.bg-img {
+    position: absolute;
+    top: -60px;
+    width: 100%;
+    height: 300px;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: linear-gradient(to top, #121212 55%, transparent);
+}
+
+.box {
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.box img {
+    width: 140px;
+}
+
+.content {
+    text-align: center;
+}
+
+/* ========================================================================= */
+/* ========================================================================= */
+.one {
+    background: url(/assets/man-utd.jpeg) center/cover;
+}
+
+.two {
+    background: url(/assets/sebastian-vettel.jpg) center center/cover no-repeat;
+}
+
+.three {
+    background: url(/assets/ferrari.jpeg) center center/cover no-repeat;
+}
+
+.four {
+    background: url(/assets/ronaldo.jpg) center center/cover no-repeat;
+    background-position-y: 2rem;
+}
+
+/* ========================================================================= */
+/* ========================================================================= */
+@media screen and (max-width: 412px) {
+    .container {
+        width: 310px;
+    }
+}

@@ -20,6 +20,10 @@ a {
     color: #fff;
 }
 
+section {
+    background: url(/assets/bg.jpg) center center/cover no-repeat;
+}
+
 .intro__banner {
     width: 100%;
     text-align: center;
@@ -258,12 +262,60 @@ a {
 
 /* ========================================================================= */
 /* ========================================================================= */
+.cont__box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+.card__box {
+    width: 300px;
+    height: 250px;
+    background: rgba(0, 87, 128);
+    position: relative;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.123);
+}
+
+.card__box img {
+    position: absolute;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card__content {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 50px;
+    padding: 0.4em 1.5em;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(10px);
+    transform: scale(0.9);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.164);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.144);
+    overflow: hidden;
+    transition: all 0.4s ease-out;
+}
+
+.card__content p {
+    font-size: 0.9em;
+}
+
+.card__box:hover .card__content {
+    height: 150px;
+}
+
 .link__tree {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: url(/assets/bg.jpg) center center/cover no-repeat;
 }
 
 .container {

@@ -385,6 +385,10 @@ section {
     background-position-y: 2rem;
 }
 
+.five {
+    background: url(/assets/aston-martin.jpg) center center/cover no-repeat;
+}
+
 /* ========================================================================= */
 /* ========================================================================= */
 @media screen and (max-width: 412px) {

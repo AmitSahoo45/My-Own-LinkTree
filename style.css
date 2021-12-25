@@ -387,6 +387,7 @@ section {
 
 .five {
     background: url(/assets/aston-martin.jpg) center center/cover no-repeat;
+    background-position-y: -2rem;
 }
 
 /* ========================================================================= */
